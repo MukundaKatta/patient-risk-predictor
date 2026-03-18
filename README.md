@@ -1,30 +1,63 @@
-# patient-risk-predictor
+# Patient Risk Predictor
 
-**Patient risk stratification with FHIR and synthetic data**
+Patient risk stratification with FHIR and synthetic data
 
-## Install
+## Features
+
+- Api
+Data - Feature Engineering
+Data - Fhir Parser
+Data - Synthetic Generator
+Explainability - Shap Explainer
+Models - Readmission
+Models - Sepsis
+
+## Tech Stack
+
+- **Language:** Python
+- **Framework:** FastAPI
+- **Key Dependencies:** pydantic,fastapi,uvicorn,anthropic,openai,numpy
+- **Containerization:** Docker + Docker Compose
+
+## Getting Started
+
+### Prerequisites
+
+- Python 3.11+
+- Docker & Docker Compose (optional)
+
+### Installation
+
 ```bash
-pip install -e '.[dev]'
+git clone https://github.com/MukundaKatta/patient-risk-predictor.git
+cd patient-risk-predictor
+pip install -r requirements.txt
 ```
 
-## Quick Start
-```python
-from src import __version__
+### Running
+
+```bash
+uvicorn app.main:app --reload
 ```
 
-## Modules
-- **fhir_parser**
-- **feature_engineering**
-- **synthetic_generator**
-- **readmission**
-- **sepsis**
-- **shap_explainer**
-- **api**
+### Docker
 
-## Docker
 ```bash
-docker compose up
+docker-compose up
+```
+
+## Project Structure
+
+```
+patient-risk-predictor/
+├── src/           # Source code
+├── tests/         # Test suite
+├── Dockerfile
+├── docker-compose.yml
+├── requirements.txt
+└── README.md
 ```
 
 ## License
-(c) 2026 Officethree Technologies. All Rights Reserved.
+
+MIT
