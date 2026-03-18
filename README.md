@@ -1,41 +1,13 @@
 # patient-risk-predictor
 
-**Predict patient risk scores from EHR data for clinical decision support**
+Stub Python project. Described as a patient risk prediction system, but none of that functionality exists.
 
-![Build](https://img.shields.io/badge/build-passing-brightgreen) ![License](https://img.shields.io/badge/license-proprietary-red)
+## What's actually here
 
-## Install
-```bash
-pip install -e ".[dev]"
-```
+A single class in `src/core.py` (PatientRiskPredictor) with placeholder methods that each return a fixed dictionary without doing any real work. There is no risk modeling, no patient data analysis, no clinical prediction - just stubs.
 
-## Quick Start
-```python
-from src.core import PatientRiskPredictor
- instance = PatientRiskPredictor()
-r = instance.track(input="test")
-```
+The project uses only Python standard library imports (time, logging, json, typing). No medical, ML, or data science libraries are present.
 
-## CLI
-```bash
-python -m src status
-python -m src run --input "data"
-```
+## Status
 
-## API
-| Method | Description |
-|--------|-------------|
-| `track()` | Track |
-| `predict()` | Predict |
-| `forecast()` | Forecast |
-| `alert()` | Alert |
-| `get_history()` | Get history |
-| `visualize()` | Visualize |
-| `get_stats()` | Get stats |
-| `reset()` | Reset |
-
-## Test
-```bash
-pytest tests/ -v
-```
-
+Scaffolding only. No working patient risk prediction functionality exists.
