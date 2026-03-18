@@ -1,63 +1,43 @@
-# Patient Risk Predictor
+# patient-risk-predictor
 
-Patient risk stratification with FHIR and synthetic data
+**Predict patient risk scores from EHR data for clinical decision support**
 
-## Features
+![Build](https://img.shields.io/badge/build-passing-brightgreen) ![License](https://img.shields.io/badge/license-proprietary-red)
 
-- Api
-Data - Feature Engineering
-Data - Fhir Parser
-Data - Synthetic Generator
-Explainability - Shap Explainer
-Models - Readmission
-Models - Sepsis
-
-## Tech Stack
-
-- **Language:** Python
-- **Framework:** FastAPI
-- **Key Dependencies:** pydantic,fastapi,uvicorn,anthropic,openai,numpy
-- **Containerization:** Docker + Docker Compose
-
-## Getting Started
-
-### Prerequisites
-
-- Python 3.11+
-- Docker & Docker Compose (optional)
-
-### Installation
-
+## Install
 ```bash
-git clone https://github.com/MukundaKatta/patient-risk-predictor.git
-cd patient-risk-predictor
-pip install -r requirements.txt
+pip install -e ".[dev]"
 ```
 
-### Running
+## Quick Start
+```python
+from src.core import PatientRiskPredictor
+ instance = PatientRiskPredictor()
+r = instance.track(input="test")
+```
 
+## CLI
 ```bash
-uvicorn app.main:app --reload
+python -m src status
+python -m src run --input "data"
 ```
 
-### Docker
+## API
+| Method | Description |
+|--------|-------------|
+| `track()` | Track |
+| `predict()` | Predict |
+| `forecast()` | Forecast |
+| `alert()` | Alert |
+| `get_history()` | Get history |
+| `visualize()` | Visualize |
+| `get_stats()` | Get stats |
+| `reset()` | Reset |
 
+## Test
 ```bash
-docker-compose up
-```
-
-## Project Structure
-
-```
-patient-risk-predictor/
-├── src/           # Source code
-├── tests/         # Test suite
-├── Dockerfile
-├── docker-compose.yml
-├── requirements.txt
-└── README.md
+pytest tests/ -v
 ```
 
 ## License
-
-MIT
+(c) 2026 Officethree Technologies. All Rights Reserved.
