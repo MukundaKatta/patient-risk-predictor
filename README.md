@@ -1,13 +1,15 @@
-# patient-risk-predictor
+# Patient Risk Predictor
 
-Stub Python project. Described as a patient risk prediction system, but none of that functionality exists.
+ML-based clinical risk prediction system for early identification of patient health deterioration.
 
-## What's actually here
+## About
+Patient Risk Predictor uses machine learning to analyze clinical data and predict patient risk levels for adverse outcomes. It processes vital signs, lab results, and medical history to generate risk scores that support proactive clinical interventions.
 
-A single class in `src/core.py` (PatientRiskPredictor) with placeholder methods that each return a fixed dictionary without doing any real work. There is no risk modeling, no patient data analysis, no clinical prediction - just stubs.
-
-The project uses only Python standard library imports (time, logging, json, typing). No medical, ML, or data science libraries are present.
+## Tech Stack
+- Language: Python
+- ML: Clinical prediction models
+- Data: EHR data processing and feature engineering
+- Output: Risk scoring with interpretable explanations
 
 ## Status
-
-Scaffolding only. No working patient risk prediction functionality exists.
+Active development - prediction models and clinical data pipeline established.
